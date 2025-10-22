@@ -1,15 +1,21 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './Components/Login/Login'; 
+import Prioridades from './Components/Tarefas/Listas/Prioridades'; 
+import './App.css';
 
-import './App.css'
-import Login from './Components/Login/Login'
-
-function App() {
-  
-
+export default function App() { 
   return (
-    <div className='App'>
-      <Login />
+    
+    <div classNameName='App'> 
+      <Router>
+        <Routes>
+          {/* Rota para o login (será a tela inicial) */}
+          <Route path="/" element={<Login />} />
+          
+          <Route path="/quadro" element={<Prioridades />} /> 
+        </Routes>
+      </Router>
     </div>
-  )
+  );
 }
-
-export default App
