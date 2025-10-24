@@ -32,7 +32,7 @@ export default function Prioridades() {
   // A função handleDragEnd (a lógica de movimento) 
 
   return (
-    <DndContext
+    <dndContext
       // A função onDragEnd virá aqui no PASSO 2
       collisionDetection={closestCorners} 
     >
@@ -49,6 +49,6 @@ export default function Prioridades() {
           />
         ))}
       </div>
-    </DndContext>
+    </dndContext>
   );
 }

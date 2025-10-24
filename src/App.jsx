@@ -7,15 +7,14 @@ import './App.css';
 export default function App() { 
   return (
     
-    <div classNameName='App'> 
-      <Router>
+    <div className='App'> 
+      <BrowserRouter>
         <Routes>
           {/* Rota para o login (será a tela inicial) */}
           <Route path="/" element={<Login />} />
-          
           <Route path="/quadro" element={<Prioridades />} /> 
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
