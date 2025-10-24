@@ -21,7 +21,11 @@ export default function Card({ card, id }) {
     backgroundColor: 'white',
     borderRadius: '4px',
     boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-    cursor: 'grab', 
+    cursor: 'pointer', 
+  };
+
+  const handleStyle = {
+    cursor: 'grab',
   };
 
   return (
@@ -29,9 +33,17 @@ export default function Card({ card, id }) {
       ref={setNodeRef}
       style={style}
       {...attributes} 
-      {...listeners} 
-    >
-      {card.content}
+     >
+        {/*
+          APENAS o elemento handle (pode ser o título, um ícone, ou o card inteiro)
+          recebe os listeners. Isso previne o comportamento de duplicação.
+        */}
+        <div 
+            style={handleStyle}
+            {...listeners} 
+        >
+            <strong>{card.content}</strong>
+        </div>
     </div>
   );
 }
