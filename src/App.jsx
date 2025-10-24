@@ -10,7 +10,6 @@ export default function App() {
     <div className='App'> 
       <BrowserRouter>
         <Routes>
-          {/* Rota para o login (será a tela inicial) */}
           <Route path="/" element={<Login />} />
           <Route path="/quadro" element={<Prioridades />} /> 
         </Routes>
